@@ -13,7 +13,7 @@ except NameError:
 
 # start by opening the DB and seeing if it was updated 2 hours ago or less
 # Read JSON file
-with open('/home/andrew/enviroments/CryptoDB.json') as data_file:
+with open('/XXXXXX/PATH_TO-FILE/CryptoDB.json') as data_file:
     data_loaded = json.load(data_file)
 
 previoustime=data_loaded["time"]
@@ -84,7 +84,7 @@ else:
 
 
 # Write JSON file
-with io.open('/home/andrew/enviroments/CryptoDB.json', 'w', encoding='utf8') as outfile:
+with io.open('/XXXXXX/PATH_TO-FILE/CryptoDB.json', 'w', encoding='utf8') as outfile:
     str_ = json.dumps(data,
                       indent=4, sort_keys=True,
                       separators=(',', ': '), ensure_ascii=False)

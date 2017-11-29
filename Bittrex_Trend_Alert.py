@@ -62,7 +62,7 @@ for x in range(0,3):
       summation=summation+TradeVals[mean_int]
 
       #for simple linear regression we need to calculate the sum of x*y where x is just the integer location of the value in the list.
-      #sigxy_sum is part of calcuating the sample covariance
+      #sigxy_sum is part of calculating the sample covariance
       #We reverse "x" value because array goes from last (latest quote) to first
       sigxy_sum=sigxy_sum+(72-mean_int)*TradeVals[mean_int]
 
@@ -78,10 +78,10 @@ for x in range(0,3):
    for variance_int in range(length):
       variancesum=variancesum+(TradeVals[variance_int]-mean)**2
 
-   #calcuate the variance by dividing the sum by the amount of entries
+   #calculate the variance by dividing the sum by the amount of entries
    variance=variancesum/(length)
 
-   # calcualte standard deviation 
+   # calculate standard deviation 
    standev = variance ** 0.5
 
 
@@ -89,8 +89,8 @@ for x in range(0,3):
    # As such, on a normal day 4 SD should be near equivalent to the "threshold" list
    variability=4*standev
 
-   #calcualte the order of magnitude of the last trade
-   magnitude=floor(log10(lastvalue))
+   #calculate the order of magnitude of the last trade
+   magnitude=log10(lastvalue)
 
    # Threshold gives us an event trigger
    # The normal swings of the currencies are $300 for BTC, $20 for ETH, and $0.50 for OMG 

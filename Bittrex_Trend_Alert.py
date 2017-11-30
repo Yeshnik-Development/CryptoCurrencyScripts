@@ -118,7 +118,7 @@ for x in range(0,3):
    lowvaluetemp = str(lowvalue)
    thresholdtemp = str(threshold)
    meantemp=str(mean)
-   trunc_val=magnitude+4
+   trunc_val=floor(magnitude)+4
    lastvalue_str=lastvaluetemp[:trunc_val]
    highvalue_str=highvaluetemp[:trunc_val]
    lowvalue_str=lowvaluetemp[:trunc_val]
